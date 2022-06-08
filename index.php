@@ -2,8 +2,6 @@
 include 'model.php';
 $product = new Model();
 $product->massDelete();
-
-header(location : 'product/list');
 ?>
 
 <!doctype html>
