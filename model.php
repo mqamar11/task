@@ -30,10 +30,10 @@ class Model extends AbstractController
 	public function insert()
 	{
 		if (isset($_POST['submit'])) {
-
-			if (isset($_POST['sku']) && isset($_POST['title']) && isset($_POST['price']) && isset($_POST['type']) && isset($_POST['size']) && isset($_POST['weight']) && isset($_POST['height']) && isset($_POST['width']) && isset($_POST['length'])) {
+			
+			if (isset($_POST['sku']) && isset($_POST['title']) && isset($_POST['price']) && isset($_POST['type']) ) {
 				// if (!empty($_POST['title']) && !empty($_POST['email']) && !empty($_POST['mobile']) && !empty($_POST['address']) ) {
-
+					// die('here');
 				$sku    = $_POST['sku'];
 				$title  = $_POST['title'];
 				$price  = $_POST['price'];
@@ -89,3 +89,30 @@ class Model extends AbstractController
 		}
 	}
 }
+
+
+?>
+
+
+
+ <!-- <script>
+    $('#productType').change(function () {
+      var selection = $('#productType').val();
+      $('.field').hide();
+      $('.dvd').hide();
+      switch (selection) {
+        case 'Dvd':
+          $('#dvd-field').show();
+          $('#dvd-p').show();
+          break;
+        case 'Book':
+          $('#book-field').show();
+          $('#book-p').show();
+          break;
+        case 'Furniture':
+          $('.furniture').show();
+          $('#furniture-p').show();
+          break;
+      }
+    });
+  </script> -->
